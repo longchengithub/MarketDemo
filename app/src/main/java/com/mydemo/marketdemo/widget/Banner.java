@@ -133,6 +133,8 @@ public class Banner extends RelativeLayout
     {
         stopScroll();
 
+        lastPosition = 0; //初始化原点
+
         if (mImageUrls != null)
         {
             initImages();
@@ -148,6 +150,8 @@ public class Banner extends RelativeLayout
         mImagePoints.getChildAt(0).setEnabled(false);
 
         mViewPager.setPageTransformer(true, new DepthPageTransformer());
+
+        mViewPager.clearOnPageChangeListeners();
         mViewPager.addOnPageChangeListener(new BannerChangeListener());
 
     }
@@ -390,7 +394,6 @@ public class Banner extends RelativeLayout
         public FixedSpeedScroller(Context context)
         {
             super(context);
-            // TODO Auto-generated constructor stub
         }
 
         public FixedSpeedScroller(Context context, Interpolator interpolator)

@@ -43,6 +43,7 @@ public class HomeFragment extends RxBaseFragment
         images.add(R.drawable.banner4);
 
         mBanner.setDelayTime(5);
+        mBanner.setDuration(600);
         mBanner.setImages(images, 1);        //因为方法重载了 传随便一个数
     }
 
@@ -50,6 +51,7 @@ public class HomeFragment extends RxBaseFragment
     public void onResume()
     {
         super.onResume();
+        mBanner.startScroll();
         Log.d("HomeFragment", "我又创建了一次");
     }
 
@@ -58,12 +60,5 @@ public class HomeFragment extends RxBaseFragment
     {
         super.onPause();
         mBanner.onPause();
-    }
-
-    @Override
-    public void onStart()
-    {
-        super.onStart();
-        mBanner.startScroll();
     }
 }

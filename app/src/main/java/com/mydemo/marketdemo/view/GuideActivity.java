@@ -66,8 +66,8 @@ public class GuideActivity extends AppCompatActivity
             dot.setScaleType(ImageView.ScaleType.CENTER);
             dot.setEnabled(true);
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                    DisplayUtil.dp2px(getBaseContext(), 10),
-                    DisplayUtil.dp2px(getBaseContext(), 10));
+                    DisplayUtil.dp2px(getBaseContext(), 6),
+                    DisplayUtil.dp2px(getBaseContext(), 6));
             params.leftMargin = 30;
             params.rightMargin = 30;
             dot.setLayoutParams(params);
